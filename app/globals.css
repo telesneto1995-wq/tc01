@@ -1,0 +1,98 @@
+@import "tailwindcss";
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    background-color: #060708;
+    color: #ffffff;
+  }
+
+  body {
+    background-color: #060708;
+    color: #ffffff;
+    overflow-x: hidden;
+  }
+}
+
+.font-display {
+  font-family: var(--font-barlow-condensed), sans-serif;
+}
+
+.font-body {
+  font-family: var(--font-barlow), sans-serif;
+}
+
+.font-script {
+  font-family: var(--font-kaushan), cursive;
+}
+
+/* Dark textured industrial carbon/asphalt background matching reference */
+.bg-industrial-dark {
+  background-color: #090a0c;
+  background-image:
+    radial-gradient(ellipse at 50% 0%, rgba(245, 180, 0, 0.06) 0%, transparent 65%),
+    radial-gradient(circle at 18% 40%, rgba(255, 255, 255, 0.03) 0%, transparent 35%),
+    radial-gradient(circle at 82% 75%, rgba(255, 255, 255, 0.025) 0%, transparent 40%),
+    repeating-linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.012) 0px,
+      rgba(255, 255, 255, 0.012) 1px,
+      transparent 1px,
+      transparent 4px
+    );
+}
+
+/* Dramatic sunset & construction earthworks backdrop for Hero */
+.bg-hero-sunset {
+  background-color: #11161c;
+  background-image:
+    radial-gradient(circle at 46% 52%, rgba(238, 128, 18, 0.72) 0%, rgba(168, 72, 12, 0.42) 28%, rgba(22, 24, 28, 0.1) 58%),
+    linear-gradient(
+      180deg,
+      #101a24 0%,
+      #252c32 24%,
+      #6a3d18 52%,
+      #9a480d 72%,
+      #3b1f09 88%,
+      #160d06 100%
+    );
+}
+
+/* Top-right angled Milagres - Bahia location ribbon */
+.clip-location-ribbon {
+  clip-path: polygon(22px 0%, 100% 0%, 100% 100%, 0% 100%);
+}
+
+/* Slanted parallelogram for the 5 machine cards (/ slant on desktop) */
+@media (min-width: 1024px) {
+  .clip-machine-frame {
+    clip-path: polygon(16% 0%, 100% 0%, 84% 100%, 0% 100%);
+  }
+
+  .clip-services-left {
+    clip-path: polygon(0% 0%, 82% 0%, 100% 100%, 0% 100%);
+  }
+
+  .clip-service-panel {
+    clip-path: polygon(0% 0%, 82% 0%, 100% 100%, 18% 100%);
+  }
+
+  .clip-service-panel-last {
+    clip-path: polygon(0% 0%, 84% 0%, 100% 78%, 100% 100%, 18% 100%);
+  }
+
+  .clip-cta-panel {
+    clip-path: polygon(8% 0%, 100% 0%, 92% 100%, 0% 100%);
+  }
+}
+
+/* Smooth fade mask on left edge of hero machines artwork */
+.mask-hero-machines {
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, rgba(0, 0, 0, 0.7) 10%, black 22%, black 100%);
+  mask-image: linear-gradient(to right, transparent 0%, rgba(0, 0, 0, 0.7) 10%, black 22%, black 100%);
+}
+
+/* Tapered golden brush stroke underline */
+.brush-underline {
+  clip-path: polygon(0% 45%, 52% 0%, 100% 25%, 94% 100%, 15% 88%);
+}

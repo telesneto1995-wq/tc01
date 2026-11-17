@@ -1,0 +1,6 @@
+{
+  "name": "Thiago Correia (TC) — Locação de Máquinas e Construtora",
+  "description": "Locação de máquinas pesadas e construtora em Milagres - Bahia. Trator de esteira, escavadeira hidráulica, caçambas, muque compactador e obras de qualidade.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
